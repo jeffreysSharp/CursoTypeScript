@@ -1,11 +1,11 @@
 "use strict";
-var mensagem = 'Seja bem vindo';
-var temporadasFriends = 10;
-var estudandoAngular = true;
-var listaDeFrutas = ['Uva', 'Banana', 'Abacaxi'];
-var notasProvas = [7.5, 8, 9];
-estudandoAngular = false;
-// let ola = (nome: string, sobrenome: string) => {
-//     console.log('Olá ' + nome + ' ' + sobrenome);
-// }
-// ola('Jeferson', 'Almeida');
+// let mensagem: string = 'Seja bem vindo';
+// let temporadasFriends: number = 10;
+// let estudandoAngular: boolean = true;
+// let listaDeFrutas: string[] = ['Uva', 'Banana', 'Abacaxi'];
+// let notasProvas: number[] = [7.5, 8, 9];
+// estudandoAngular = false;
+var ola = function (nome, sobrenome) {
+    console.log('Olá ' + nome + ' ' + sobrenome);
+};
+ola('Jeferson', 'Almeida');
