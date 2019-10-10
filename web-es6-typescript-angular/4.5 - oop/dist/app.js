@@ -1,9 +1,9 @@
-"use strict";
 var Carro = /** @class */ (function () {
-    function Carro(modelo, numeroPortas) {
-        // private numeroDePortas: number;
+    function Carro(modelo, numeroPortas, velocidade) {
         this.velocidade = 0;
         this.modelo = modelo;
+        this.numeroDePortas = numeroPortas;
+        this.velocidade = velocidade;
     }
     Carro.prototype.acelerar = function () {
         this.velocidade = this.velocidade + 10;
@@ -49,14 +49,23 @@ var Pessoa = /** @class */ (function () {
     return Pessoa;
 }());
 // Criar listar de carros
-var carroA = new Carro('Dodge Journey', 4);
-var carroB = new Carro('Veloster', 3);
-var carroC = new Carro('Cerato', 4);
+var carroA = new Carro('Dodge Journey', 4, 0);
+var carroB = new Carro('Veloster', 3, 0);
+var carroC = new Carro('Cerato', 4, 0);
 // Montar a lista de carros da concessionária
 var listaDeCarros = [carroA, carroB, carroC];
 var concessionaria = new Concessionaria('Av. Paulista', listaDeCarros);
 // Exibir Lista de carros
-console.log(concessionaria.mostrarListaDeCarros());
+// console.log(concessionaria.mostrarListaDeCarros());
 // Comprar o carro
-var cliente = new Pessoa('Jeferson', '');
-// VIDEO 22 
+var cliente = new Pessoa('Jeferson', 'Veloster');
+// console.log(cliente.dizerCarroPreferido());
+console.log(cliente.dizerCarroQueTem());
+concessionaria.mostrarListaDeCarros().map(function (carro) {
+    // console.log(carro);
+    if (carro['modelo'] === cliente.dizerCarroPreferido()) {
+        //comprar carro
+        cliente.comprarCarro(carro);
+    }
+});
+console.log(cliente.dizerCarroQueTem());
