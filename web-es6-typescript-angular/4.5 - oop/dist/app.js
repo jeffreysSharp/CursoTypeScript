@@ -15,7 +15,7 @@ var concessionaria = new concessionaria_1["default"]('Av. Paulista', listaDeCarr
 // Comprar o carro
 var cliente = new pessoa_1["default"]('Jeferson', 'Veloster');
 // console.log(cliente.dizerCarroPreferido());
-var possuiCarro = cliente.dizerCarroQueTem() ? cliente.dizerCarroQueTem() : 'Nenhum';
+var possuiCarro = cliente.dizerCarroQueTem() ? cliente.dizerCarroQueTem() : 'Não possui nenhum veículo';
 console.log(possuiCarro);
 concessionaria.mostrarListaDeCarros().map(function (carro) {
     // console.log(carro);
