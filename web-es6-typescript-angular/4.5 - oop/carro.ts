@@ -17,6 +17,7 @@ export default class Carro {
         this.velocidade = this.velocidade = 0;
     }
 
+
     public velocidadeAtual(): number {
         return this.velocidade;
     }
