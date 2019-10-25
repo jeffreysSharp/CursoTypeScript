@@ -4,25 +4,26 @@ var pessoa_1 = require("./pessoa");
 var PessoaDao = /** @class */ (function () {
     function PessoaDao() {
         this.nomeTabela = 'tb_pessoa';
+        this.nomeObjeto = 'Pessoa';
     }
     PessoaDao.prototype.inserir = function (object) {
-        console.log('lógica inserir');
+        console.log(this.nomeObjeto, 'cadastrada com sucesso!');
         return true;
     };
     PessoaDao.prototype.atualizar = function (object) {
-        console.log('lógica atualizar');
+        console.log(this.nomeObjeto, 'atualizada com sucesso!');
         return true;
     };
     PessoaDao.prototype.remover = function (id) {
-        console.log('lógica remover');
+        console.log(this.nomeObjeto, 'removida com sucesso!');
         return new pessoa_1["default"]('', '');
     };
     PessoaDao.prototype.selecionar = function (id) {
-        console.log('lógica selecionar');
+        console.log(this.nomeObjeto, 'selecionada');
         return new pessoa_1["default"]('', '');
     };
     PessoaDao.prototype.selecionarTodos = function () {
-        console.log('lógica selecionar todos');
+        console.log(this.nomeObjeto, 's selecionadas');
         return [new pessoa_1["default"]('', '')];
     };
     return PessoaDao;

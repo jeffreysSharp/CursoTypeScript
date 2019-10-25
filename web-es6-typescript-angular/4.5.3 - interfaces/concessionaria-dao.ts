@@ -5,33 +5,35 @@ import { DaoInterface } from "./dao-interface";
 export class ConcessionariaDao implements DaoInterface {
 
     nomeTabela: string = 'tb_concessionaria';
+    nomeObjeto: string = 'Concessionária';
 
     inserir(object: Concessionaria): boolean {
 
-        console.log('lógica inserir')
+        console.log(this.nomeObjeto, 'cadastrada com sucesso!');
         return true;
     }
 
     atualizar(object: Concessionaria): boolean {
 
-        console.log('lógica atualizar')
+        console.log(this.nomeObjeto, 'atualizada com sucesso!');
         return true;
     }
 
     remover(id: number): Concessionaria {
 
-        console.log('lógica remover')
+        console.log(this.nomeObjeto, 'removida com sucesso!');
         return new Concessionaria('', []);
     }
 
     selecionar(id: number): Concessionaria {
 
-        console.log('lógica selecionar');
+        console.log(this.nomeObjeto, 'selecionada');
         return new Concessionaria('', []);
     }
 
     selecionarTodos(): [any] {
-        console.log('lógica selecionar todos');
+
+        console.log(this.nomeObjeto, 's selecionadas');
         return [new Concessionaria('', [])];
     }
 
