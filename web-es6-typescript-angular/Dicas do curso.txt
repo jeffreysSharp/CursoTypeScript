@@ -1,2 +1,6 @@
 Build and whatch
 tsc app --outDir ./dist --w
+
+
+Extensions
+vscode icons
