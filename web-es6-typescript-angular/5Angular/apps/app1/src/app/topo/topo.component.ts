@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./topo.component.scss']
 })
 
-export class TopoComponent { }
+export class TopoComponent {
+  title = 'Aprendendo Inglês';
+}
