@@ -4,3 +4,7 @@ tsc app --outDir ./dist --w
 
 Extensions
 vscode icons
+
+
+git remote set-url origin https://jeffreysSharp:8515Zyi8@github.com/jeffreysSharp/CursoTypeScript.git
+git remote -v
