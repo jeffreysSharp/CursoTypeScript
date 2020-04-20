@@ -18,8 +18,8 @@ export class PainelComponent implements OnInit {
 
 
   constructor() {
-    this.rodadaFrase = this.frases[this.rodada];
-    console.log('this.rodadaFrase', this.rodadaFrase);
+    this.atualizaRodada();
+
   }
 
   ngOnInit() {
@@ -31,16 +31,20 @@ export class PainelComponent implements OnInit {
 
   verificarResposta() {
     if (this.rodadaFrase.frasePtBr === this.resposta) {
-      alert('A tradução está correta');
-
       this.rodada++;
-      this.rodadaFrase = this.frases[this.rodada];
+      this.atualizaRodada();
       this.progresso = this.progresso + (100 / this.frases.length);
+
+
     } else {
-      alert('A tradução está errada');
 
     }
 
+  }
+
+  atualizaRodada() {
+    this.rodadaFrase = this.frases[this.rodada];
+    this.resposta = '';
   }
 
 }
